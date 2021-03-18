@@ -1,22 +1,21 @@
 main {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
+    grid-template-columns: 33% 33% 33%;
     grid-gap: 3px;
     align-items: center;
     justify-content: center;
+    max-width: 375px;
 }
 
 app-square {
     border: 1px black solid;
-    height: 150px;
+    height: 125px;
 }
 
 div {
     display: grid;
-    grid-template-rows: 70px;
-    grid-template-columns: 300px;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 350px;
+
 }
 
 #newGame {
@@ -25,4 +24,9 @@ div {
     grid-template-columns: 150px 150px 150px;
     align-items: center;
     justify-items: center;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
 }

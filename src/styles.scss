@@ -1,6 +1,7 @@
 @import 'themes';
 
 @import '~@nebular/theme/styles/globals';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 @include nb-install() {
   @include nb-theme-global();
