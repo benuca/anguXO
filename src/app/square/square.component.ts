@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
@@ -9,10 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
   `,
 styles: ['button { width: 100%; height: 100%; font-size: 5em !important; }']
 })
-export class SquareComponent implements OnInit {
+export class SquareComponent  {
 
-  @Input() value: 'X' | 'O' | undefined;
+  @Input()
+  value!: 'X' | 'O';
 
-  ngOnInit(): void {  }
+
 
 }

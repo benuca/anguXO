@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  squares: any[] = [];  
+  squares: string[] = [];  
   isXNext: boolean = false;
   winner: string | undefined;
   constructor() { }
@@ -27,7 +27,7 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(squareID: number){
-    if (this.squares[squareID] = null) 
+    if (!this.squares[squareID]) 
     {
       this.squares.splice(squareID, 1, this.player);
       this.isXNext = !this.isXNext;
