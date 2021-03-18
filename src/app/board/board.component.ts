@@ -9,7 +9,8 @@ export class BoardComponent implements OnInit {
 
   squares: any[] = [];  
   isXNext: boolean = false;
-  winner: string | undefined;
+  winner!: any;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class BoardComponent implements OnInit {
 
   newGame(){
     this.squares = Array(9).fill(null);
-    this.winner = "";
+    this.winner = null;
     this.isXNext = true;
   }
 
@@ -27,11 +28,13 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(squareID: number){
-    if (this.squares[squareID] = null) 
+    if (!this.squares[squareID]) 
     {
       this.squares.splice(squareID, 1, this.player);
       this.isXNext = !this.isXNext;
     }
+
+    this.winner = this.calculateWinner();
   }
 
   calculateWinner() {
