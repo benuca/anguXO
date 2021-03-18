@@ -5,6 +5,8 @@ main {
     align-items: center;
     justify-content: center;
     max-width: 375px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 app-square {
@@ -14,7 +16,7 @@ app-square {
 
 div {
     display: grid;
-    grid-template-columns: 350px;
+    grid-template-columns: 300px;
 
 }
 
